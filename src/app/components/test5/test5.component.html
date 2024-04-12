@@ -8,6 +8,8 @@
     <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="8"></textarea>
 </mat-form-field>
 
+<h3 class="roboto-regular">Servicios</h3>
+
 <mat-chip-listbox aria-label="Fish selection" multiple [(ngModel)]="data">
     <mat-chip-option [value]="1">One fish</mat-chip-option>
     <mat-chip-option [value]="2">Two fish</mat-chip-option>
@@ -17,6 +19,38 @@
 
 {{ data | json }}
 
+<h3 class="roboto-regular">Fotos</h3>
+
+<div class="galery">
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+    <div class="galery__item">
+        <img src="" alt="">
+    </div>
+</div>
+<br><br>
 <button mat-flat-button color="primary" class="full-width" style="margin-bottom: 1rem;" (click)="crear();">Crear
     Anuncio</button>
 
