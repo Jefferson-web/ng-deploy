@@ -19,6 +19,9 @@ import { Test5Component } from './components/test5/test5.component';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatChipsModule} from '@angular/material/chips';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { Test6Component } from './components/test6/test6.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Test2Component,
     Test3Component,
     Test4Component,
-    Test5Component
+    Test5Component,
+    Test6Component
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TextFieldModule,
     MatChipsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatBottomSheetModule,
+    MatListModule
   ],
   providers: [
     provideAnimationsAsync()
