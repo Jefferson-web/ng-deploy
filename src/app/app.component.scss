@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav__list{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: white;
+}
+
+.nav__item{
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #212121;
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+}
+
+.router-link-active {
+    color: #ba005c;   
+}
+
+.main__nav_item{
+    position: relative;
+}
+
+.main__nav_item button{
+    position: absolute;
+    top: -30%;
+}
+

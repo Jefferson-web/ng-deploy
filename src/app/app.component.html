@@ -1,0 +1,34 @@
+<router-outlet></router-outlet>
+
+
+<ul class="nav__list">
+  <li class="nav__item" matRipple>
+    <a [routerLink]="['/inicio']" routerLinkActive="router-link-active" class="nav__link">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <span class="nav__name">Inicio</span>
+    </a>
+  </li>
+  <li class="nav__item" matRipple>
+    <a [routerLink]="['/anuncios']" routerLinkActive="router-link-active" class="nav__link">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="dynamic_feed"></mat-icon>
+      <span class="nav__name">Anuncios</span>
+    </a>
+  </li>
+  <li class="main__nav_item" [routerLink]="['/crear_anuncio']">
+    <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example mini fab with a heart icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </li>
+  <li class="nav__item" matRipple>
+    <a [routerLink]="['/suscripcion']" routerLinkActive="router-link-active" class="nav__link">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="sell"></mat-icon>
+      <span class="nav__name">Suscripción</span>
+    </a>
+  </li>
+  <li class="nav__item" matRipple>
+    <a [routerLink]="['/mas']" routerLinkActive="router-link-active" class="nav__link">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="more_horiz"></mat-icon>
+      <span class="nav__name">Más</span>
+    </a>
+  </li>
+</ul>
