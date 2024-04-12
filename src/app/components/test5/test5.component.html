@@ -8,11 +8,16 @@
     <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="8"></textarea>
 </mat-form-field>
 
-<button 
-    mat-flat-button 
-    color="primary" 
-    class="full-width" 
-    style="margin-bottom: 1rem;"
-    (click)="crear();">Crear Anuncio</button>
+<mat-chip-listbox aria-label="Fish selection" multiple [(ngModel)]="data">
+    <mat-chip-option [value]="1">One fish</mat-chip-option>
+    <mat-chip-option [value]="2">Two fish</mat-chip-option>
+    <mat-chip-option [value]="3" color="accent" selected>Accent fish</mat-chip-option>
+    <mat-chip-option [value]="4" color="warn">Warn fish</mat-chip-option>
+</mat-chip-listbox>
+
+{{ data | json }}
+
+<button mat-flat-button color="primary" class="full-width" style="margin-bottom: 1rem;" (click)="crear();">Crear
+    Anuncio</button>
 
 <button mat-stroked-button color="primary" class="full-width" [routerLink]="['/anuncios']">Cancelar</button>

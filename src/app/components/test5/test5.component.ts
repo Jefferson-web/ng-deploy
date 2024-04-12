@@ -9,4 +9,7 @@ export class Test5Component {
   crear(){
     alert("Registrado");
   }
+
+  data: any;
+
 }

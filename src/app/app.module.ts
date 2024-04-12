@@ -17,6 +17,8 @@ import { Test3Component } from './components/test3/test3.component';
 import { Test4Component } from './components/test4/test4.component';
 import { Test5Component } from './components/test5/test5.component';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatChipsModule} from '@angular/material/chips';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,10 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    TextFieldModule
+    TextFieldModule,
+    MatChipsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
