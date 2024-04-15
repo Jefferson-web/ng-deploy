@@ -24,6 +24,9 @@ import { Test6Component } from './components/test6/test6.component';
 import {MatListModule} from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatBottomSheetModule,
     MatListModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule,
+    MatButtonToggleModule,
+    MatRadioModule
   ],
   providers: [
     provideAnimationsAsync()

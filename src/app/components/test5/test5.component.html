@@ -1,99 +1,115 @@
-<mat-form-field class="full-width">
-    <mat-label>Título</mat-label>
-    <input matInput>
-</mat-form-field>
+<mat-card class="example-card">
+    <mat-card-content>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Título</mat-label>
+            <input matInput>
+        </mat-form-field>
 
-<mat-form-field class="full-width">
-    <mat-label>Descripción</mat-label>
-    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="8"></textarea>
-</mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="8"></textarea>
+        </mat-form-field>
 
-<h3 class="roboto-regular">Atenciones</h3>
+        <h3 class="roboto-regular">Atenciones</h3>
 
-<mat-chip-listbox multiple [(ngModel)]="atencionesSeleccionadas">
-    <mat-chip-option [value]="atencion.value" *ngFor="let atencion of atenciones">{{ atencion.text }}</mat-chip-option>
-</mat-chip-listbox>
+        <mat-chip-listbox multiple [(ngModel)]="atencionesSeleccionadas">
+            <mat-chip-option [value]="atencion.value" *ngFor="let atencion of atenciones">{{ atencion.text }}
+            </mat-chip-option>
+        </mat-chip-listbox>
 
-{{ atencionesSeleccionadas | json }}
+        {{ atencionesSeleccionadas | json }}
 
-<h3 class="roboto-regular">Nacionalidades</h3>
+        <h3 class="roboto-regular">Nacionalidades</h3>
 
-<mat-form-field>
-    <mat-label>Elige una opción</mat-label>
-    <mat-select [(ngModel)]="nacionalidadesSeleccionadas">
-        <mat-option [value]="nacionalidad.value" *ngFor="let nacionalidad of nacionalidades">{{ nacionalidad.text }}
-        </mat-option>
-    </mat-select>
-</mat-form-field>
+        <mat-form-field>
+            <mat-label>Elige una opción</mat-label>
+            <mat-select [(ngModel)]="nacionalidadesSeleccionadas">
+                <mat-option [value]="nacionalidad.value" *ngFor="let nacionalidad of nacionalidades">{{
+                    nacionalidad.text }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-{{ nacionalidadesSeleccionadas | json }}
+        {{ nacionalidadesSeleccionadas | json }}
 
-<h3 class="roboto-regular">Preferencias</h3>
+        <h3 class="roboto-regular">Preferencias</h3>
 
-<mat-form-field>
-    <mat-label>Nacionalidades</mat-label>
-    <mat-select multiple [(ngModel)]="preferenciasSeleccionadas">
-        <mat-option [value]="preferencia.value" *ngFor="let preferencia of preferencias">{{ preferencia.text }}
-        </mat-option>
-    </mat-select>
-</mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Nacionalidades</mat-label>
+            <mat-select multiple [(ngModel)]="preferenciasSeleccionadas">
+                <mat-option [value]="preferencia.value" *ngFor="let preferencia of preferencias">{{ preferencia.text }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-{{ preferenciasSeleccionadas | json }}
+        {{ preferenciasSeleccionadas | json }}
 
-<h3 class="roboto-regular">Servicios</h3>
+        <h3 class="roboto-regular">Servicios</h3>
 
-<mat-chip-listbox multiple [(ngModel)]="serviciosSeleccionados">
-    <mat-chip-option [value]="servicio.value" *ngFor="let servicio of servicios">{{ servicio.text }}</mat-chip-option>
-</mat-chip-listbox>
+        <mat-chip-listbox multiple [(ngModel)]="serviciosSeleccionados">
+            <mat-chip-option [value]="servicio.value" *ngFor="let servicio of servicios">{{ servicio.text }}
+            </mat-chip-option>
+        </mat-chip-listbox>
 
-{{ serviciosSeleccionados | json }}
+        {{ serviciosSeleccionados | json }}
 
-<mat-form-field class="example-full-width">
-    <mat-label>Teléfono</mat-label>
-    <span matTextPrefix>+51 &nbsp;</span>
-    <input type="tel" matInput>
-    <mat-icon matSuffix>phone_enabled</mat-icon>
-</mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Teléfono</mat-label>
+            <span matTextPrefix>+51 &nbsp;</span>
+            <input type="tel" matInput>
+            <mat-icon matSuffix>phone_enabled</mat-icon>
+        </mat-form-field>
+
+        <section class="example-section">
+            <label class="example-margin">Genero</label>
+            <mat-radio-group>
+                <mat-radio-button class="example-margin" value="after">Mujer</mat-radio-button>
+                <mat-radio-button class="example-margin" value="before">Trans</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <h3 class="roboto-regular">Fotos</h3>
+
+        <div class="galery">
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+            <div class="galery__item">
+                <img src="" alt="">
+            </div>
+        </div>
+        <br><br>
+        <p>You have received a file called "cat-picture.jpeg".</p>
+
+        <button mat-raised-button (click)="openBottomSheet()">Open file</button>
+
+        <br><br>
+        <button mat-flat-button color="primary" class="full-width" style="margin-bottom: 1rem;" (click)="crear();">Crear
+            Anuncio</button>
+
+        <button mat-stroked-button color="primary" class="full-width" [routerLink]="['/anuncios']">Cancelar</button>
 
 
-<h3 class="roboto-regular">Fotos</h3>
-
-<div class="galery">
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-    <div class="galery__item">
-        <img src="" alt="">
-    </div>
-</div>
-<br><br>
-<p>You have received a file called "cat-picture.jpeg".</p>
-
-<button mat-raised-button (click)="openBottomSheet()">Open file</button>
-
-<br><br>
-<button mat-flat-button color="primary" class="full-width" style="margin-bottom: 1rem;" (click)="crear();">Crear
-    Anuncio</button>
-
-<button mat-stroked-button color="primary" class="full-width" [routerLink]="['/anuncios']">Cancelar</button>
+    </mat-card-content>
+</mat-card>
