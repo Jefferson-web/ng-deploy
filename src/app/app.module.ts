@@ -22,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { Test6Component } from './components/test6/test6.component';
 import {MatListModule} from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import {MatListModule} from '@angular/material/list';
     FormsModule,
     ReactiveFormsModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync()

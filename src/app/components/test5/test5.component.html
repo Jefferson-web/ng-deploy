@@ -8,16 +8,45 @@
     <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="8"></textarea>
 </mat-form-field>
 
-<h3 class="roboto-regular">Servicios</h3>
+<h3 class="roboto-regular">Atenciones</h3>
 
-<mat-chip-listbox aria-label="Fish selection" multiple [(ngModel)]="data">
-    <mat-chip-option [value]="1">One fish</mat-chip-option>
-    <mat-chip-option [value]="2">Two fish</mat-chip-option>
-    <mat-chip-option [value]="3" color="accent" selected>Accent fish</mat-chip-option>
-    <mat-chip-option [value]="4" color="warn">Warn fish</mat-chip-option>
+<mat-chip-listbox multiple [(ngModel)]="atencionesSeleccionadas">
+    <mat-chip-option [value]="atencion.value" *ngFor="let atencion of atenciones">{{ atencion.text }}</mat-chip-option>
 </mat-chip-listbox>
 
-{{ data | json }}
+{{ atencionesSeleccionadas | json }}
+
+<h3 class="roboto-regular">Nacionalidades</h3>
+
+<mat-form-field>
+    <mat-label>Elige una opción</mat-label>
+    <mat-select [(ngModel)]="nacionalidadesSeleccionadas">
+        <mat-option [value]="nacionalidad.value" *ngFor="let nacionalidad of nacionalidades">{{ nacionalidad.text }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+{{ nacionalidadesSeleccionadas | json }}
+
+<h3 class="roboto-regular">Preferencias</h3>
+
+<mat-form-field>
+    <mat-label>Nacionalidades</mat-label>
+    <mat-select multiple [(ngModel)]="preferenciasSeleccionadas">
+        <mat-option [value]="preferencia.value" *ngFor="let preferencia of preferencias">{{ preferencia.text }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+{{ preferenciasSeleccionadas | json }}
+
+<h3 class="roboto-regular">Servicios</h3>
+
+<mat-chip-listbox multiple [(ngModel)]="serviciosSeleccionados">
+    <mat-chip-option [value]="servicio.value" *ngFor="let servicio of servicios">{{ servicio.text }}</mat-chip-option>
+</mat-chip-listbox>
+
+{{ serviciosSeleccionados | json }}
+
 
 <h3 class="roboto-regular">Fotos</h3>
 
