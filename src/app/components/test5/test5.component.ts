@@ -131,6 +131,7 @@ export class Test5Component implements OnInit {
   public nacionalidadesSeleccionadas: any;
   public preferenciasSeleccionadas: any;
   public serviciosSeleccionados: any;
+  public telefono: any;
 
   openBottomSheet(): void {
     this._bottomSheet.open(Test6Component);

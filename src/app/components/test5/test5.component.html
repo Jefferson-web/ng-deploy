@@ -33,7 +33,8 @@
 <mat-form-field>
     <mat-label>Nacionalidades</mat-label>
     <mat-select multiple [(ngModel)]="preferenciasSeleccionadas">
-        <mat-option [value]="preferencia.value" *ngFor="let preferencia of preferencias">{{ preferencia.text }}</mat-option>
+        <mat-option [value]="preferencia.value" *ngFor="let preferencia of preferencias">{{ preferencia.text }}
+        </mat-option>
     </mat-select>
 </mat-form-field>
 
@@ -46,6 +47,13 @@
 </mat-chip-listbox>
 
 {{ serviciosSeleccionados | json }}
+
+<mat-form-field class="example-full-width">
+    <mat-label>Teléfono</mat-label>
+    <span matTextPrefix>+51 &nbsp;</span>
+    <input type="tel" matInput>
+    <mat-icon matSuffix>phone_enabled</mat-icon>
+</mat-form-field>
 
 
 <h3 class="roboto-regular">Fotos</h3>
